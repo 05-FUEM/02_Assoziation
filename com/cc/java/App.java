@@ -8,6 +8,7 @@ public class App {
        
         customer.initOrder();
         customer.checkOrder();
+        
 
        
     }

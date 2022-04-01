@@ -34,6 +34,7 @@ public class Customer {
            Helper.ausgabe(getOrderDetails("#type")); 
            Helper.ausgabe(getOrderDetails("#date"));
            Helper.ausgabe(getOrderDetails("#status"));
+           Helper.ausgabe("-----------------------");
         }
     }
 
@@ -57,9 +58,6 @@ public class Customer {
             return "Auftrag in Bearbeitung." ; 
         }
     }
-
-
-
 
 
     /** Getter */
