@@ -17,7 +17,7 @@ public class Customer {
     /** Assoziation */
     public void initOrder() {
         // Referenz auf erzeugtes Objekt im Heap
-        order = new Order(1, "repair");
+        order = new Order(1, "repair", this);
     }
 
     public void removeOrder() {
@@ -57,6 +57,12 @@ public class Customer {
         } else {
             return "Auftrag in Bearbeitung." ; 
         }
+    }
+
+    public void actOnOrdeFinished() {
+        checkOrder();
+        removeOrder();
+        checkOrder();
     }
 
 
