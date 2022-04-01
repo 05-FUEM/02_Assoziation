@@ -31,10 +31,25 @@ public class Customer {
         if (order == null ) { // gibt es das Objekt ???
             Helper.ausgabe("Kein Auftrag vorhanden!");
         } else {
-           Helper.ausgabe(order.getOrderDate()); 
-           Helper.ausgabe(checkOrderStatus());
+           Helper.ausgabe(getOrderDetails("#type")); 
+           Helper.ausgabe(getOrderDetails("#?!4"));
         }
     }
+
+    private String getOrderDetails(String flag) {
+        
+        switch (flag) {
+            case "#type": // ordertype 
+                return order.getOrderType();
+               
+            default:
+                return "Irgendwas ging schief!";
+              
+        }
+    }
+
+
+
 
      private String checkOrderStatus() {
         if (order.isFinished()) {
