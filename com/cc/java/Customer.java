@@ -59,7 +59,7 @@ public class Customer {
         }
     }
 
-    public void actOnOrdeFinished() {
+    public void actOnOrderFinished() {
         checkOrder();
         removeOrder();
         checkOrder();

@@ -46,7 +46,7 @@ public class Order {
 
     private void finishOrder() {
         isFinished = true;
-        customer.actOnOrdeFinished(); 
+        customer.actOnOrderFinished(); 
     }
 
 
