@@ -27,6 +27,14 @@ public class Customer {
         order = null;
     }
 
+    public void checkOrder() {
+        if (order == null ) { // gibt es das Objekt ???
+            Helper.ausgabe("Kein Auftrag vorhanden!");
+        } else {
+           Helper.ausgabe(order.getOrderDate()); 
+        }
+    }
+
     /** Getter */
 
     public int getId() {
