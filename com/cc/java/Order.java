@@ -2,6 +2,7 @@ package com.cc.java;
 
 import java.time.LocalDate;
 import java.util.Timer;
+import java.util.TimerTask;
 
 public class Order {
     
@@ -24,8 +25,33 @@ public class Order {
     /** Auftragshandling */
 
     private void startTimer() {
-       Helper.ausgabe("Timer gestartet"); 
+    
+        // TimerTask --> finishOrder() + Timer stoppen
+        Helper.ausgabe("Timer gestartet"); 
+
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                finishOrder();
+                timer.cancel();
+            }
+        };
+    
+        // neuen Timer anlegen / Timer starten mit Parametern
+        timer = new Timer();
+        timer.schedule(task, 3*1000);
+
+
+
+
+
+       
     }
+
+    private void finishOrder() {
+        Helper.ausgabe("Timer fertig!"); 
+    }
+
 
 
 
