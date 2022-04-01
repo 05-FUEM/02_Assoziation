@@ -10,9 +10,13 @@ public class Customer {
         this.id = id;
         this.name = name;
         this.city = city;
-        
-        Helper.ausgabe(this);
     }
+
+
+
+
+
+    /** Getter */
 
     public int getId() {
         return id;

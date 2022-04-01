@@ -4,7 +4,7 @@ public class App {
     
     public static void main(String[] args) {
      
-       Customer customer = new Customer(1, "Maxine Mützerich", "Mützenhausen");
+        Customer customer = new Customer(1, "Maxine Mützerich", "Mützenhausen");
         Helper.ausgabe(customer);
       
     }
