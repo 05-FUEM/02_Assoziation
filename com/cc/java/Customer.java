@@ -32,8 +32,21 @@ public class Customer {
             Helper.ausgabe("Kein Auftrag vorhanden!");
         } else {
            Helper.ausgabe(order.getOrderDate()); 
+           Helper.ausgabe(checkOrderStatus());
         }
     }
+
+     private String checkOrderStatus() {
+        if (order.isFinished()) {
+            return "Auftrag fertig." ;
+        } else {
+            return "Auftrag in Bearbeitung." ; 
+        }
+    }
+
+
+
+
 
     /** Getter */
 
